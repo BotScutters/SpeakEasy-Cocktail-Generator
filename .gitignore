@@ -3,3 +3,4 @@ notebooks/.ipynb_checkpoints/*
 src/scratch.py
 data/processed/dt_matrix.pickle
 .vscode
+data/processed/X_topics.pkl

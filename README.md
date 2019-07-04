@@ -7,7 +7,7 @@ Description: This is a deep learning framework that integrates knowledge about c
 You know that thing where you're hanging out in a schmancy speakeasy and the bartender asks you what you'd like to have—not in terms of a specific cocktail, or even the base spirit, but in terms of the flavor profile? And then just sets to work grabbing one bottle after another until before you know it you've got a little bit of magic in your mouth and you don't even know how? That. That right there is the epitome of mixology, as far as I'm concerned. That's "[the speakeasy experience](http://speakeasy-ai-bartender.herokuapp.com/)." That's what I've sought to recreate with this app.
 
 <figure>
-  <img src="{static}/reports/bar.jpg" alt="speakeasy-bar" style="width:100%">
+  <img src="/reports/bar.jpg" alt="speakeasy-bar" style="width:100%">
   <figcaption>My home bar, soon to be tended by my personal AI assistant.</figcaption>
 </figure>
 

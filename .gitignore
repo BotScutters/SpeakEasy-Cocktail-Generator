@@ -4,3 +4,6 @@ src/scratch.py
 data/processed/dt_matrix.pickle
 .vscode
 data/processed/X_topics.pkl
+data/interim/dlist.pkl
+models/svd.pkl
+data/raw/difford_drink_list.pkl copy

@@ -2,6 +2,12 @@ import os
 import pickle
 
 def load_or_make(filepath, overwrite='n'):
+    '''
+    The @load_or_make decorator a one-shot memoizer. If overwrite set to 'y', 
+    decorator will load previously computed values from a backup file rather 
+    than running the function again. Otherwise function will run as normal and
+    output will be stored to filepath.
+    '''
     def decorator(func):
         def wraps(*args, **kwargs):
             if overwrite == 'y':
@@ -9,10 +15,14 @@ def load_or_make(filepath, overwrite='n'):
                 if (os.path.exists(filepath)) and (ow == 'y'):
                     os.remove(filepath)
             try:
+                # Load
                 with open(filepath, 'rb') as f:
                     data = pickle.load(f)
             except:
+                # Generate
                 data = func(*args, **kwargs)
+                
+                # Store
                 with open(filepath, 'wb') as to_write:
                     pickle.dump(data, to_write)
             return data
@@ -22,7 +32,7 @@ def load_or_make(filepath, overwrite='n'):
 
 def save_to(item, filepath, verbose=True):
     """
-    Pickles item sand saves it to path
+    Pickles item and saves it to path
     Input: object to be pickled, string containing directory and filename
     Output: pickled object stored to provided path
     """
